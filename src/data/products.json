@@ -1,6 +1,5 @@
-
 [
-{
+  {
     "id": 1,
     "name": "UV Protection Sunglasses",
     "brand": "SunShade",
@@ -8,10 +7,9 @@
     "rating": 4.7,
     "stock": 10,
     "description": "Stylish UV protection sunglasses perfect for summer outings.",
-    "image": "https://i.postimg.cc/example1.png",
+    "image": "https://i.ibb.co/TDjFZnsS/sunglass.png",
     "category": "Accessories"
   },
-
   {
     "id": 2,
     "name": "Summer Beach Hat",
@@ -20,7 +18,7 @@
     "rating": 4.5,
     "stock": 15,
     "description": "Lightweight and breathable beach hat for sunny days.",
-    "image": "https://i.postimg.cc/example2.png",
+    "image": "https://i.ibb.co/TDjFZnsS/sunglass.png",
     "category": "Accessories"
   },
   {
@@ -31,7 +29,7 @@
     "rating": 4.8,
     "stock": 20,
     "description": "Protect your skin with this hydrating SPF 50 sunscreen.",
-    "image": "https://i.postimg.cc/example3.png",
+    "image": "https://i.ibb.co/TDjFZnsS/sunglass.png",
     "category": "Skincare"
   },
   {
@@ -42,7 +40,7 @@
     "rating": 4.3,
     "stock": 25,
     "description": "Comfortable cotton t-shirt perfect for hot weather.",
-    "image": "https://i.postimg.cc/example4.png",
+    "image": "https://i.ibb.co/TDjFZnsS/sunglass.png",
     "category": "Clothing"
   },
   {
@@ -53,7 +51,7 @@
     "rating": 4.6,
     "stock": 12,
     "description": "Elegant floral summer dress for casual outings.",
-    "image": "https://i.postimg.cc/example5.png",
+    "image": "https://i.ibb.co/TDjFZnsS/sunglass.png",
     "category": "Clothing"
   },
   {
@@ -64,7 +62,7 @@
     "rating": 4.4,
     "stock": 30,
     "description": "Compact and rechargeable fan for instant cooling.",
-    "image": "https://i.postimg.cc/example6.png",
+    "image": "https://i.ibb.co/TDjFZnsS/sunglass.png",
     "category": "Electronics"
   },
   {
@@ -75,7 +73,7 @@
     "rating": 4.2,
     "stock": 18,
     "description": "Comfortable and stylish slippers for beach use.",
-    "image": "https://i.postimg.cc/example7.png",
+    "image": "https://i.ibb.co/TDjFZnsS/sunglass.png",
     "category": "Footwear"
   },
   {
@@ -86,7 +84,7 @@
     "rating": 4.7,
     "stock": 22,
     "description": "Instantly refresh your skin with a cooling mist.",
-    "image": "https://i.postimg.cc/example8.png",
+    "image": "https://i.ibb.co/TDjFZnsS/sunglass.png",
     "category": "Skincare"
   },
   {
@@ -97,7 +95,7 @@
     "rating": 4.5,
     "stock": 14,
     "description": "Spacious waterproof bag for all your beach essentials.",
-    "image": "https://i.postimg.cc/example9.png",
+    "image": "https://i.ibb.co/TDjFZnsS/sunglass.png",
     "category": "Accessories"
   },
   {
@@ -108,7 +106,7 @@
     "rating": 4.6,
     "stock": 10,
     "description": "Pack of 3 stylish sunglasses for different looks.",
-    "image": "https://i.postimg.cc/example10.png",
+    "image": "https://i.ibb.co/TDjFZnsS/sunglass.png",
     "category": "Accessories"
   },
   {
@@ -119,7 +117,62 @@
     "rating": 4.8,
     "stock": 28,
     "description": "Stay hydrated with this BPA-free stylish bottle.",
-    "image": "https://i.postimg.cc/example11.png",
+    "image": "https://i.ibb.co/TDjFZnsS/sunglass.png",
     "category": "Fitness"
+  },
+  {
+    "id": 12,
+    "name": "Cooling Neck Wrap",
+    "brand": "CoolWrap",
+    "price": 7,
+    "rating": 4.3,
+    "stock": 20,
+    "description": "Stay cool with this reusable cooling neck wrap.",
+    "image": "https://i.ibb.co/TDjFZnsS/sunglass.png",
+    "category": "Accessories"
+  },
+  {
+    "id": 13,
+    "name": "Summer Sports Cap",
+    "brand": "FitGear",
+    "price": 9,
+    "rating": 4.4,
+    "stock": 17,
+    "description": "Lightweight cap for outdoor sports and running.",
+    "image": "https://i.ibb.co/TDjFZnsS/sunglass.png",
+    "category": "Accessories"
+  },
+  {
+    "id": 14,
+    "name": "Beach Towel XL",
+    "brand": "SeaSoft",
+    "price": 14,
+    "rating": 4.6,
+    "stock": 19,
+    "description": "Large soft beach towel perfect for summer trips.",
+    "image": "https://i.ibb.co/TDjFZnsS/sunglass.png",
+    "category": "Home"
+  },
+  {
+    "id": 15,
+    "name": "Insulated Lunch Box",
+    "brand": "CoolBox",
+    "price": 17,
+    "rating": 4.5,
+    "stock": 13,
+    "description": "Keep your food fresh with this insulated lunch box.",
+    "image": "https://i.ibb.co/TDjFZnsS/sunglass.png",
+    "category": "Lifestyle"
+  },
+  {
+    "id": 16,
+    "name": "Outdoor Picnic Mat",
+    "brand": "GreenField",
+    "price": 20,
+    "rating": 4.7,
+    "stock": 11,
+    "description": "Waterproof picnic mat for outdoor adventures.",
+    "image": "https://i.ibb.co/TDjFZnsS/sunglass.png",
+    "category": "Outdoor"
   }
 ]

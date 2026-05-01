@@ -1,17 +1,18 @@
 import Hero from "@/components/Hero";
-import ProductGrid from "@/components/ProductGrid";
 import PopularProducts from "@/components/PopularProducts";
 import SummerTips from "@/components/SummerTips";
 import TopBrands from "@/components/TopBrands";
+import { getProducts } from "@/lib/getProducts";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const products = await getProducts();
+
   return (
     <>
       <Hero />
-      <ProductGrid />
-      <PopularProducts />
-      <SummerTips />
-      <TopBrands />
+      <PopularProducts products={products} />
+      <SummerTips products={products} />
+      <TopBrands products={products} />
     </>
   );
 }

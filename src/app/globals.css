@@ -7,11 +7,16 @@ html {
 
 body {
   min-height: 100vh;
-  background: 
-    radial-gradient(circle at 20% 20%, rgba(0,180,165,0.50), transparent 35%),
-    radial-gradient(circle at 80% 75%, rgba(255,183,0,0.45), transparent 35%),
+
+  background:
+    radial-gradient(circle at 20% 60%, rgba(0,180,165,0.50), transparent 80%),
+    radial-gradient(circle at 85% 70%, rgba(246, 196, 70, 0.504), transparent 60%),
     linear-gradient(135deg, #065f5b 0%, #033f3c 45%, #021f1f 100%);
-    
+
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
+  background-size: cover;
+
   color: white;
 }
 

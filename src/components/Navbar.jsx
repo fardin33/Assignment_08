@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ShoppingBag, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -11,12 +11,24 @@ export default function Navbar() {
   const { data: session } = authClient.useSession();
   const [isOpen, setIsOpen] = useState(false);
   const [active, setActive] = useState("Home");
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Products", href: "/products" },
     { name: "My Profile", href: "/profile" },
   ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const logout = async () => {
     await authClient.signOut();
@@ -43,7 +55,13 @@ export default function Navbar() {
 
   return (
     <header className="fixed left-0 top-3 z-50 w-full">
-      <nav className="relative mx-auto flex w-[90%] md:w-[83%] lg:w-[60%] max-w-400 items-center justify-between rounded-full border border-white/15 bg-white/10 px-6 lg:px-8 py-3 text-white shadow-2xl shadow-black/20 backdrop-blur-2xl">
+      <nav
+        className={`relative mx-auto flex max-w-400 items-center justify-between rounded-full border border-white/15 bg-white/10 px-6 py-3 text-white backdrop-blur-2xl transition-all duration-500 ease-in-out lg:px-8 ${
+          isScrolled
+            ? "w-[84%] md:w-[75%] lg:w-[53%]"
+            : "w-[90%] md:w-[83%] lg:w-[65%]"
+        }`}
+      >
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 text-xl font-black">
           <span className="rounded-full bg-amber-400 p-2 text-teal-800 shadow-lg shadow-amber-500/20">
