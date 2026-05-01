@@ -1,0 +1,125 @@
+
+[
+{
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "rating": 4.7,
+    "stock": 10,
+    "description": "Stylish UV protection sunglasses perfect for summer outings.",
+    "image": "https://i.postimg.cc/example1.png",
+    "category": "Accessories"
+  },
+
+  {
+    "id": 2,
+    "name": "Summer Beach Hat",
+    "brand": "SunnyStyle",
+    "price": 12,
+    "rating": 4.5,
+    "stock": 15,
+    "description": "Lightweight and breathable beach hat for sunny days.",
+    "image": "https://i.postimg.cc/example2.png",
+    "category": "Accessories"
+  },
+  {
+    "id": 3,
+    "name": "Aloe Vera Sunscreen SPF 50",
+    "brand": "GlowCare",
+    "price": 18,
+    "rating": 4.8,
+    "stock": 20,
+    "description": "Protect your skin with this hydrating SPF 50 sunscreen.",
+    "image": "https://i.postimg.cc/example3.png",
+    "category": "Skincare"
+  },
+  {
+    "id": 4,
+    "name": "Men's Summer T-Shirt",
+    "brand": "CoolWear",
+    "price": 10,
+    "rating": 4.3,
+    "stock": 25,
+    "description": "Comfortable cotton t-shirt perfect for hot weather.",
+    "image": "https://i.postimg.cc/example4.png",
+    "category": "Clothing"
+  },
+  {
+    "id": 5,
+    "name": "Women's Floral Dress",
+    "brand": "BloomFit",
+    "price": 22,
+    "rating": 4.6,
+    "stock": 12,
+    "description": "Elegant floral summer dress for casual outings.",
+    "image": "https://i.postimg.cc/example5.png",
+    "category": "Clothing"
+  },
+  {
+    "id": 6,
+    "name": "Portable Mini Fan",
+    "brand": "AirGo",
+    "price": 9,
+    "rating": 4.4,
+    "stock": 30,
+    "description": "Compact and rechargeable fan for instant cooling.",
+    "image": "https://i.postimg.cc/example6.png",
+    "category": "Electronics"
+  },
+  {
+    "id": 7,
+    "name": "Beach Slippers",
+    "brand": "WalkEasy",
+    "price": 8,
+    "rating": 4.2,
+    "stock": 18,
+    "description": "Comfortable and stylish slippers for beach use.",
+    "image": "https://i.postimg.cc/example7.png",
+    "category": "Footwear"
+  },
+  {
+    "id": 8,
+    "name": "Cooling Face Mist",
+    "brand": "FreshGlow",
+    "price": 11,
+    "rating": 4.7,
+    "stock": 22,
+    "description": "Instantly refresh your skin with a cooling mist.",
+    "image": "https://i.postimg.cc/example8.png",
+    "category": "Skincare"
+  },
+  {
+    "id": 9,
+    "name": "Waterproof Beach Bag",
+    "brand": "SeaCarry",
+    "price": 16,
+    "rating": 4.5,
+    "stock": 14,
+    "description": "Spacious waterproof bag for all your beach essentials.",
+    "image": "https://i.postimg.cc/example9.png",
+    "category": "Accessories"
+  },
+  {
+    "id": 10,
+    "name": "Summer Sunglass Combo Pack",
+    "brand": "SunMax",
+    "price": 25,
+    "rating": 4.6,
+    "stock": 10,
+    "description": "Pack of 3 stylish sunglasses for different looks.",
+    "image": "https://i.postimg.cc/example10.png",
+    "category": "Accessories"
+  },
+  {
+    "id": 11,
+    "name": "Hydration Water Bottle",
+    "brand": "HydroLife",
+    "price": 13,
+    "rating": 4.8,
+    "stock": 28,
+    "description": "Stay hydrated with this BPA-free stylish bottle.",
+    "image": "https://i.postimg.cc/example11.png",
+    "category": "Fitness"
+  }
+]
