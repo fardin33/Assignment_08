@@ -14,7 +14,7 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Products", href: "#products" },
+    { name: "Products", href: "/products" },
     { name: "My Profile", href: "/profile" },
   ];
 
@@ -38,15 +38,15 @@ export default function Navbar() {
 
   const navItemClass = (linkName) =>
     `relative rounded-full px-5 py-2 transition ${
-      active === linkName ? "text-black" : "text-white hover:text-amber-400"
+      active === linkName ? "text-teal-800" : "text-white hover:text-amber-400"
     }`;
 
   return (
-    <header className="fixed left-0 top-4 z-50 w-full">
-      <nav className="relative mx-auto flex w-[92%] sm:w-[88%] md:w-[80%] lg:w-[70%] xl:w-[65%] max-w-285 items-center justify-between rounded-full border border-white/15 bg-white/10 px-6 lg:px-8 py-3 text-white shadow-2xl shadow-black/20 backdrop-blur-2xl">
+    <header className="fixed left-0 top-3 z-50 w-full">
+      <nav className="relative mx-auto flex w-[90%] md:w-[83%] lg:w-[60%] max-w-400 items-center justify-between rounded-full border border-white/15 bg-white/10 px-6 lg:px-8 py-3 text-white shadow-2xl shadow-black/20 backdrop-blur-2xl">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 text-xl font-black">
-          <span className="rounded-full bg-amber-400 p-2 text-teal-950 shadow-lg shadow-amber-500/20">
+          <span className="rounded-full bg-amber-400 p-2 text-teal-800 shadow-lg shadow-amber-500/20">
             <ShoppingBag size={20} />
           </span>
           SunCart
@@ -64,7 +64,7 @@ export default function Navbar() {
                 {active === link.name && (
                   <motion.span
                     layoutId="nav-pill"
-                    className="absolute inset-0 rounded-full bg-yellow-500"
+                    className="absolute inset-0 rounded-full bg-yellow-500 text-teal-800"
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   />
                 )}
@@ -80,7 +80,7 @@ export default function Navbar() {
                 {active === link.name && (
                   <motion.span
                     layoutId="nav-pill"
-                    className="absolute inset-0 rounded-full bg-yellow-500"
+                    className="absolute inset-0 rounded-full bg-yellow-500 text-teal-800"
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   />
                 )}
@@ -102,7 +102,7 @@ export default function Navbar() {
           ) : (
             <Link
               href="/login"
-              className="rounded-full bg-amber-400 px-5 py-2 text-sm font-bold text-teal-950 shadow-lg shadow-amber-500/20"
+              className="rounded-full bg-amber-400 px-5 py-2 text-sm font-bold text-teal-800 shadow-lg shadow-amber-500/20"
             >
               Login
             </Link>
@@ -135,7 +135,7 @@ export default function Navbar() {
                       onClick={() => handleNavClick(link)}
                       className={`rounded-2xl px-4 py-3 text-left text-sm font-bold transition ${
                         active === link.name
-                          ? "bg-amber-400 text-teal-950"
+                          ? "bg-amber-400 text-teal-800"
                           : "text-white/80 hover:bg-white/10"
                       }`}
                     >
@@ -148,7 +148,7 @@ export default function Navbar() {
                       onClick={() => handleNavClick(link)}
                       className={`rounded-2xl px-4 py-3 text-sm font-bold transition ${
                         active === link.name
-                          ? "bg-amber-400 text-teal-950"
+                          ? "bg-amber-400 text-teal-800"
                           : "text-white/80 hover:bg-white/10"
                       }`}
                     >
