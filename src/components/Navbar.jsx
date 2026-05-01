@@ -59,7 +59,7 @@ export default function Navbar() {
         className={`relative mx-auto flex max-w-400 items-center justify-between rounded-full border border-white/15 bg-white/10 px-6 py-3 text-white backdrop-blur-2xl transition-all duration-500 ease-in-out lg:px-8 ${
           isScrolled
             ? "w-[84%] md:w-[75%] lg:w-[53%]"
-            : "w-[90%] md:w-[83%] lg:w-[65%]"
+            : "w-[90%] md:w-[83%] lg:w-[83%]"
         }`}
       >
         {/* Logo */}
@@ -109,7 +109,7 @@ export default function Navbar() {
         </div>
 
         {/* Right Side */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-1">
           {session ? (
             <button
               onClick={logout}

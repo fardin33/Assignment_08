@@ -1,23 +1,37 @@
 "use client";
 
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import ProductCard from "./ProductCardUi";
 
 const PopularProducts = ({ products = [] }) => {
   return (
-    <section className="mx-auto w-11/13 max-w-8xl mt-30">
-      <div className="mb-10">
-        <p className="text-xs font-black uppercase tracking-[0.35em] text-amber-400">
-          Featured
-        </p>
+    <section className="mx-auto mt-30 w-11/13 max-w-8xl">
+      <div className="mb-10 flex items-end justify-between gap-5">
+        <div>
+          <p className="text-xs font-black uppercase tracking-[0.35em] text-yellow-400">
+            Featured
+          </p>
 
-        <h2 className="mt-3 text-3xl font-black text-white sm:text-4xl lg:text-5xl">
-          Popular, <span className="text-amber-400">Products</span>
-        </h2>
+          <h2 className="mt-3 text-3xl font-black text-white sm:text-4xl lg:text-5xl">
+            Popular <span className="text-yellow-400">Products</span>
+          </h2>
+        </div>
+
+        <Link
+          href="/products"
+          className="group inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm text-white/50 backdrop-blur transition duration-300 hover:border-yellow-500 hover:bg-yellow-500 hover:text-black mr-2"
+        >
+          View all
+          <span className="grid h-6 w-6 place-items-center rounded-full border border-white/30 bg-transparent text-white transition duration-300 group-hover:translate-x-1 group-hover:border-black group-hover:bg-black group-hover:text-yellow-400">
+            <ArrowUpRight size={14} strokeWidth={3} />
+          </span>
+        </Link>
       </div>
 
       <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8">
-        {products.slice(0, 8).map((product) => (
-          <ProductCard key={product.id} product={product} />
+        {products.slice(0, 6).map((product, index) => (
+          <ProductCard key={product.id} product={product} index={index} />
         ))}
       </div>
     </section>

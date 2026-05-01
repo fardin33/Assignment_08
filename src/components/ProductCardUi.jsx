@@ -4,11 +4,27 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Star } from "lucide-react";
 import { motion } from "framer-motion";
-export default function ProductCard({ product }) {
+
+export default function ProductCard({ product, index = 0 }) {
+  const getDirection = () => {
+    if (typeof window !== "undefined" && window.innerWidth >= 1280) {
+      return index % 4 < 2 ? -120 : 120;
+    }
+
+    return -120;
+  };
+
   return (
     <motion.div
+      initial={{ opacity: 0, x: getDirection(), y: 30 }}
+      whileInView={{ opacity: 1, x: 0, y: 0 }}
+      viewport={{ once: true, amount: 0.25 }}
+      transition={{
+        duration: 0.7,
+        delay: (index % 4) * 0.1,
+        ease: "easeOut",
+      }}
       whileHover={{ y: -8 }}
-      transition={{ duration: 0.35, ease: "easeOut" }}
       className="group overflow-hidden rounded-4xl border border-white/10 bg-white/10 p-3 shadow-[0_20px_60px_rgba(0,0,0,0.18)] backdrop-blur-md"
     >
       <div className="relative h-80 overflow-hidden rounded-3xl bg-black/10 md:h-85">
@@ -39,7 +55,7 @@ export default function ProductCard({ product }) {
             </p>
           </div>
 
-          <p className="shrink-0 text-xl font-black leading-none text-amber-400 mr-1">
+          <p className="mr-1 shrink-0 text-xl font-black leading-none text-amber-400">
             ${product.price}
           </p>
         </div>
