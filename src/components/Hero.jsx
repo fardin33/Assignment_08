@@ -76,7 +76,7 @@ export default function SummerSaleBanner() {
 
   return (
     <section
-      className="mx-auto w-11/12 md:w-10/12 lg:md:w-11/13 xl:md:w-11/13 pb-10  md:pt-32"
+      className="mx-auto w-11/12 md:w-10/12 lg:md:w-11/13 xl:md:w-11/13 pt-25 pb-10  md:pt-25 lg:pt-30"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
