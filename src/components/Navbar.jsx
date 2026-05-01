@@ -67,7 +67,7 @@ export default function Navbar() {
           <span className="rounded-full bg-amber-400 p-2 text-teal-800 shadow-lg shadow-amber-500/20">
             <ShoppingBag size={20} />
           </span>
-          SunCart
+          Summer<span className="text-yellow-400">Store</span>
         </Link>
 
         {/* Large Screen View */}

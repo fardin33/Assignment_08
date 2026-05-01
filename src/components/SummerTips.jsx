@@ -35,7 +35,7 @@ const tips = [
 
 export default function SummerTips() {
   return (
-    <section className="mt-40">
+    <section className="mt-45">
       <div className="mx-auto w-11/12 xl:w-11/13">
         <div className="text-center">
           <h2 className="text-4xl font-black tracking-tight text-white md:text-5xl">

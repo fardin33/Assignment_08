@@ -6,8 +6,8 @@ import ProductCard from "./ProductCardUi";
 
 const PopularProducts = ({ products = [] }) => {
   return (
-    <section className="mx-auto mt-30 w-11/13 max-w-8xl">
-      <div className="mb-10 flex items-end justify-between gap-5">
+    <section className="mx-auto mt-30 w-11/12 max-w-8xl xl:w-11/13">
+      <div className="mb-10 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p className="text-xs font-black uppercase tracking-[0.35em] text-yellow-400">
             Featured
@@ -20,7 +20,7 @@ const PopularProducts = ({ products = [] }) => {
 
         <Link
           href="/products"
-          className="group inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm text-white/50 backdrop-blur transition duration-300 hover:border-yellow-500 hover:bg-yellow-500 hover:text-black mr-2"
+          className="group inline-flex w-fit items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-bold text-white/70 backdrop-blur transition duration-300 hover:border-yellow-500 hover:bg-yellow-500 hover:text-black sm:mr-2"
         >
           View all
           <span className="grid h-6 w-6 place-items-center rounded-full border border-white/30 bg-transparent text-white transition duration-300 group-hover:translate-x-1 group-hover:border-black group-hover:bg-black group-hover:text-yellow-400">
