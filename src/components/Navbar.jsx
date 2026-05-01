@@ -58,8 +58,8 @@ export default function Navbar() {
       <nav
         className={`relative mx-auto flex max-w-400 items-center justify-between rounded-full border border-white/15 bg-white/10 px-6 py-3 text-white backdrop-blur-2xl transition-all duration-500 ease-in-out lg:px-8 ${
           isScrolled
-            ? "w-[84%] md:w-[75%] lg:w-[53%]"
-            : "w-[90%] md:w-[83%] lg:w-[83%]"
+            ? "w-[92%] md:w-[82%] lg:w-[53%]"
+            : "w-[92%] md:w-[90%] lg:w-[83%]"
         }`}
       >
         {/* Logo */}
@@ -67,7 +67,9 @@ export default function Navbar() {
           <span className="rounded-full bg-amber-400 p-2 text-teal-800 shadow-lg shadow-amber-500/20">
             <ShoppingBag size={20} />
           </span>
-          Summer<span className="text-yellow-400">Store</span>
+          <h2 className="text-[18.5px] md:text-[21.5px] lg:text-[24px] font-extrabold text-white bg-clip-text">
+            Summer<span className="text-yellow-400">Store</span>
+          </h2>
         </Link>
 
         {/* Large Screen View */}
@@ -109,7 +111,7 @@ export default function Navbar() {
         </div>
 
         {/* Right Side */}
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-2">
           {session ? (
             <button
               onClick={logout}
@@ -120,7 +122,7 @@ export default function Navbar() {
           ) : (
             <Link
               href="/login"
-              className="rounded-full bg-amber-400 px-5 py-2 text-sm font-bold text-teal-800 shadow-lg shadow-amber-500/20"
+              className="rounded-full bg-amber-400 px-4 py-1.5 md:px-5 md:py-2 lg:px-5 lg:py-2 text-sm font-bold text-teal-800 shadow-lg shadow-amber-500/20"
             >
               Login
             </Link>

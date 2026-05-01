@@ -54,7 +54,7 @@ export default function SummerTips() {
             return (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-3xl border-3 border-teal-700/30 bg-linear-to-br from-teal-800 to-teal-900 p-6 shadow-[0_8px_25px_rgba(0,0,0,0.25)] transition-all duration-300 hover:-translate-y-1 hover:border-teal-600 hover:shadow-[0_12px_30px_rgba(0,0,0,0.28)]"
+                className="group relative overflow-hidden rounded-3xl border-3 border-teal-700/30 bg-linear-to-br from-teal-800 to-teal-900 p-6 shadow-[0_8px_25px_rgba(0,0,0,0.25)] transition-all duration-300 hover:-translate-y-1 hover:border-3 hover:border-teal-400 hover:shadow-[0_12px_30px_rgba(0,0,0,0.28)]"
               >
                 <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-teal-500/5 blur-3xl transition duration-500 group-hover:bg-teal-500/10" />
 
