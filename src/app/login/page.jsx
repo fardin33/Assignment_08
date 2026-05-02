@@ -30,11 +30,11 @@ export default function LoginPage() {
               <div className="absolute inset-0 rounded-full border-4 border-white/10" />
               <div className="absolute inset-0 animate-spin rounded-full border-4 border-transparent border-t-white border-r-white/70" />
             </div>
-          </div>
+          </div>  
         </main>
       }
     >
-      <LoginForm />
+      <LoginForm /> 
     </Suspense>
   );
 }

@@ -153,8 +153,8 @@ export default function Navbar() {
       <nav
         className={`relative mx-auto flex max-w-400 items-center justify-between rounded-full border border-white/15 bg-white/10 px-4 py-3 text-white backdrop-blur-2xl transition-all duration-500 ease-in-out md:px-6 lg:px-8 ${
           isScrolled
-            ? "w-[90%] md:w-[82%] lg:w-[53%]"
-            : "w-[90%] md:w-[90%] lg:w-[83%]"
+            ? "w-[90%] md:w-[82%] lg:w-[78%]"
+            : "w-[90%] md:w-[90%] lg:w-[85%]"
         }`}
       >
         <Link

@@ -301,8 +301,6 @@ import Image from "next/image";
 
 const STORAGE_KEY = "summer-store-profile";
 
-// Step 1: Default profile image
-// image path empty হলে এই default avatar show করবে
 const DEFAULT_AVATAR =
   "https://api.dicebear.com/9.x/adventurer/svg?seed=default-person";
 
@@ -330,8 +328,6 @@ function getSavedProfile() {
   }
 }
 
-// Step 2: Safe image URL checker
-// Empty, null, undefined, invalid string হলে default avatar return করবে
 function getSafeImage(image) {
   if (!image || typeof image !== "string") {
     return DEFAULT_AVATAR;
@@ -366,12 +362,11 @@ export default function UpdateProfilePage() {
 
   const [isSaving, setIsSaving] = useState(false);
 
-  // Step 3: Image load fail করলে এই state true হবে
+
   const [imageError, setImageError] = useState(false);
 
   const displayName = formData.name || user?.name || "";
 
-  // Step 4: input image না থাকলে user image, সেটাও না থাকলে default avatar
   const displayImage = formData.image || user?.image || "";
 
   const previewImage = useMemo(() => {
@@ -392,7 +387,6 @@ export default function UpdateProfilePage() {
   const handleImageChange = (event) => {
     const value = event.target.value;
 
-    // Step 5: user image input change করলে previous image error reset হবে
     setImageError(false);
 
     setFormData((prev) => ({
@@ -477,34 +471,33 @@ export default function UpdateProfilePage() {
 
           <form
             onSubmit={handleSubmit}
-            className="mt-6 space-y-6 rounded-3xl border border-white/10 bg-black/10 p-6"
+            className="mt-6 space-y-6 rounded-3xl border border-white/10 bg-black/10 p-4 md:p-6 lg:p-8"
           >
-            <div className="rounded-3xl border border-yellow-400/20 bg-yellow-400/10 p-5">
+            <div className="rounded-3xl border border-yellow-400/20 bg-yellow-400/10 p-2 md:p-2.5 lg:p-3">
               <div className="flex items-center gap-5">
                 <div className="relative">
-                  <div className="h-24 w-24 overflow-hidden rounded-3xl border-4 border-white bg-white shadow-[0_20px_50px_rgba(0,0,0,0.25)]">
+                  <div className="h-18 w-18 md:h-23 md:w-23 lg:h-26 lg:w-26 overflow-hidden rounded-3xl border-4 border-white bg-white shadow-[0_20px_50px_rgba(0,0,0,0.25)]">
                     <Image
                       src={previewImage}
                       alt="Profile preview"
                       className="h-full w-full object-cover"
-                      width={96}
-                      height={96}
-                      // Step 7: image URL broken error Handle :
+                      width={90}
+                      height={90}
                       onError={() => setImageError(true)}
                     />
                   </div>
 
-                  <div className="absolute -right-2 -top-2 flex h-8 w-8 items-center justify-center rounded-full bg-green-500 text-white shadow-lg">
+                  <div className="absolute right-0 top-0 md:-right-1 md:top-0 lg:-right-2 lg:-top-1 flex h-4.5 w-4.5 md:h-6 md:w-6 lg:h-8 lg:w-8 items-center justify-center rounded-full bg-green-500 text-white shadow-lg">
                     <Check size={17} />
                   </div>
                 </div>
 
                 <div>
-                  <h2 className="text-xl font-black text-white">
+                  <h2 className="text-[19px] md:text-[24px] lg:text-[26px] font-black text-white">
                     {displayName || "Customer"}
                   </h2>
 
-                  <p className="mt-1 text-sm font-bold text-yellow-300">
+                  <p className="mt-1 text-[12px] md:text-[14px] lg:text-[15px] font-bold text-yellow-300">
                     {user?.email || savedProfile?.email || "No email found"}
                   </p>
                 </div>
@@ -544,14 +537,10 @@ export default function UpdateProfilePage() {
                     name="image"
                     value={formData.image}
                     onChange={handleImageChange}
-                    placeholder="Leave empty for default profile image"
+                    placeholder="Leave empty for default image"
                     className="w-full bg-transparent text-sm font-semibold text-white outline-none placeholder:text-white/30"
                   />
                 </div>
-
-                <p className="mt-2 text-xs font-semibold text-white/45">
-                  Leave empty for default profile image
-                </p>
               </div>
             </div>
 
@@ -561,7 +550,7 @@ export default function UpdateProfilePage() {
                   Premium Default Avatars
                 </p>
 
-                <span className="rounded-full bg-green-500 px-3 py-1 text-[10px] font-black uppercase tracking-widest text-white">
+                <span className="rounded-full bg-black px-3 py-1 text-[10px] font-black uppercase tracking-widest text-white">
                   Pro Choice
                 </span>
               </div>

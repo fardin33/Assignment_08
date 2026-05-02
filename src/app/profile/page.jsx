@@ -95,24 +95,26 @@ export default function ProfilePage() {
             <div className="rounded-3xl border border-white/10 bg-black/10 p-6">
               <div className="space-y-4">
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                  <p className="text-xs font-black uppercase tracking-widest text-white/40">
+                  <p className="text-[10px] md:text-[11px] lg:text-[12px] font-black uppercase tracking-widest text-white/40">
                     Full Name
                   </p>
 
-                  <h2 className="mt-1 text-2xl font-black text-white">
+                  <h2 className="mt-1 text-[15px] md:text-[17px] lg:text-[19px] font-black text-white">
                     {profile.name}
                   </h2>
                 </div>
 
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                  <p className="text-xs font-black uppercase tracking-widest text-white/40">
+                  <p className="text-[10px] md:text-[11px] lg:text-[12px] font-black uppercase tracking-widest text-white/40">
                     Email Address
                   </p>
 
                   <div className="mt-2 flex items-center gap-2 text-white/75">
                     <Mail size={18} className="text-yellow-300" />
 
-                    <p className="text-sm font-semibold">{profile.email}</p>
+                    <p className="text-[12px] md:text-[14px] lg:text-[15px] font-semibold">
+                      {profile.email}
+                    </p>
                   </div>
                 </div>
               </div>
