@@ -119,7 +119,7 @@ export default function ProfilePage() {
 
               <Link
                 href="/UpdateProfile"
-                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-yellow-400 px-6 py-3 text-sm font-black text-teal-900 shadow-lg shadow-yellow-500/20 transition duration-300 hover:-translate-y-1 hover:bg-yellow-300 md:w-auto"
+                className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-teal-700 px-6 py-3 text-sm font-black text-white shadow-sm shadow-gray-500/90 transition duration-300 hover:-translate-y-1 hover:bg-black hover:text-white md:w-auto"
               >
                 <Pencil size={17} />
                 Update Profile

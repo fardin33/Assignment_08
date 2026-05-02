@@ -4,7 +4,7 @@ export default function TopBrands() {
   const brands = [...new Set(products.slice(0, 4).map((item) => item.brand))];
 
   return (
-    <section className="w-full md:w-11/11 lg:w-11/12  mx-auto overflow-hidden mt-28 md:mt-45">
+    <section className="w-full md:w-11/11 lg:w-11/12  mx-auto overflow-hidden mt-28 md:mt-45 mb-60">
       <div className="mx-auto w-11/12">
         <h2 className="mb-8 text-center text-3xl font-extrabold text-white md:mb-14 md:text-5xl">
           Top <span className=" text-yellow-400 bg-clip-text">brands</span>

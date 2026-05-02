@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 
 export default function ProductDetails({ product }) {
   return (
-    <section className="mx-auto w-11/12 max-w-7xl py-16">
+    <section className="mx-auto w-11/12 max-w-7xl pt-30 pb-50 ">
       <Link
         href="/"
         className="mb-8 inline-flex items-center gap-2 text-sm font-bold text-white/60 transition hover:text-amber-400"
@@ -66,7 +66,7 @@ export default function ProductDetails({ product }) {
 
               <button
                 onClick={() => toast.success(`${product.name} added to cart`)}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-amber-400 px-6 py-4 font-black text-black transition hover:bg-amber-300 active:scale-95 sm:w-fit"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-teal-800 px-6 py-4 font-semibold text-white transition hover:bg-black hover:text-white  active:scale-95 sm:w-fit"
               >
                 <ShoppingCart size={20} />
                 Add to Cart

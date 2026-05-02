@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef } from "react";
 import { ChevronLeft, ChevronRight, ShoppingBag } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 const slides = [
   {
@@ -157,7 +158,7 @@ export default function SummerSaleBanner() {
             </div>
             {/* Shop Now Button : */}
             <button className="mt-10 rounded-full bg-yellow-400 px-8 py-4 text-sm font-black text-teal-900 shadow-xl shadow-yellow-500/20 transition hover:scale-105 hover:bg-yellow-300">
-              Shop Now
+              <Link href="/products">Shop Now</Link>
             </button>
           </div>
         </div>

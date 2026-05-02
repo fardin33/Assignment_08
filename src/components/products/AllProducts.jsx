@@ -5,8 +5,8 @@ import products from "@/data/products.json";
 
 const AllProducts = () => {
   return (
-    <main className="min-h-screen bg-[#042f2e] pt-50 pb-20 text-white">
-      <section className="mx-auto w-11/13">
+    <main className="min-h-screen  pt-50 pb-60 text-white">
+      <section className="mx-auto w-11/12">
         {/* Section Header */}
         <div className="mb-14 text-center">
           <p className="mb-3 text-xs font-black uppercase tracking-[0.35em] text-yellow-300">
