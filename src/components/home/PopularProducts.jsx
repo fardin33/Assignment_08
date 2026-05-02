@@ -30,7 +30,7 @@ const PopularProducts = ({ products = [] }) => {
       </div>
 
       <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8">
-        {products.slice(0, 6).map((product, index) => (
+        {products.slice(0, 3).map((product, index) => (
           <ProductCard key={product.id} product={product} index={index} />
         ))}
       </div>
