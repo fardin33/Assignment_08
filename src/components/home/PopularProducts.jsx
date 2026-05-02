@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import ProductCard from "./ProductCardUi";
+import ProductCard from "@/components/ui/ProductCardUi";
 
 const PopularProducts = ({ products = [] }) => {
   return (

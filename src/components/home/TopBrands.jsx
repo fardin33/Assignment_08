@@ -1,7 +1,7 @@
 import products from "@/data/products.json";
 
 export default function TopBrands() {
-  const brands = [...new Set(products.map((item) => item.brand))];
+  const brands = [...new Set(products.slice(0, 4).map((item) => item.brand))];
 
   return (
     <section className="w-full md:w-11/11 lg:w-11/12  mx-auto overflow-hidden mt-28 md:mt-45">

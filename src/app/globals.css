@@ -34,5 +34,5 @@ body {
 }
 
 .animate-brandMoveSlow {
-  animation: brandMoveSlow 35s linear infinite;
+  animation: brandMoveSlow 10s linear infinite;
 }

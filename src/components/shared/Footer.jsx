@@ -2,7 +2,7 @@ import { ShoppingBag } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="mt-20 text-white border-t border-white/10">
+    <footer className="mt-10 text-white border-t border-white/10">
       <div className="mx-auto w-11/12 py-12 grid gap-10 sm:grid-cols-2 md:grid-cols-4">
         <div>
           <div className="flex items-center gap-3 group">
@@ -64,7 +64,7 @@ export default function Footer() {
               placeholder="Enter your email"
               className="w-full bg-transparent px-4 py-2 text-sm outline-none text-white placeholder:text-white/50"
             />
-            <button className="bg-teal-800 px-4 py-2 text-sm font-semibold text-white hover:bg-teal-700 transition cursor-pointer">
+            <button className="bg-teal-800 px-4 py-2 text-sm font-semibold text-white hover:bg-teal-700 transition">
               Subscribe
             </button>
           </div>
