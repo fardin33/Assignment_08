@@ -217,7 +217,7 @@ function RegisterForm() {
                 type="button"
                 onClick={() => setIsPasswordVisible((prev) => !prev)}
                 disabled={loading}
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-white/50 transition hover:text-yellow-400 disabled:cursor-not-allowed disabled:opacity-50"
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-yellow-300 transition disabled:cursor-not-allowed disabled:opacity-50"
                 aria-label={
                   isPasswordVisible ? "Hide password" : "Show password"
                 }
