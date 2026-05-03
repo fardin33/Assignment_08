@@ -6,6 +6,7 @@ import Link from "next/link";
 import toast from "react-hot-toast";
 import { authClient } from "@/lib/auth-client";
 import { GrGoogle } from "react-icons/gr";
+import { Eye, EyeOff } from "lucide-react";
 import Lottie from "lottie-react";
 import loadingAnimation from "@/assets/Insider-loading.json";
 
@@ -16,6 +17,7 @@ export default function LoginForm() {
   const redirect = redirectParam.startsWith("/") ? redirectParam : "/";
 
   const [loading, setLoading] = useState(false);
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -120,15 +122,28 @@ export default function LoginForm() {
               Password
             </label>
 
-            <input
-              id="password"
-              name="password"
-              type="password"
-              placeholder="Enter your password"
-              className="w-full rounded-2xl border border-white/10 bg-white/10 px-4 py-4 text-white outline-none transition placeholder:text-white/35 focus:border-orange-400 focus:bg-white/15"
-              required
-              autoComplete="current-password"
-            />
+            <div className="relative">
+              <input
+                id="password"
+                name="password"
+                type={isPasswordVisible ? "text" : "password"}
+                placeholder="Enter your password"
+                className="w-full rounded-2xl border border-white/10 bg-white/10 px-4 py-4 pr-13 text-white outline-none transition placeholder:text-white/35 focus:border-orange-400 focus:bg-white/15"
+                required
+                autoComplete="current-password"
+              />
+
+              <button
+                type="button"
+                onClick={() => setIsPasswordVisible((prev) => !prev)}
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-white/50 transition hover:text-yellow-400"
+                aria-label={
+                  isPasswordVisible ? "Hide password" : "Show password"
+                }
+              >
+                {isPasswordVisible ? <EyeOff size={20} /> : <Eye size={20} />}
+              </button>
+            </div>
           </div>
         </div>
 

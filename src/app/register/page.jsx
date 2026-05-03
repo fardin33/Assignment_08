@@ -1,24 +1,30 @@
 "use client";
 
 import { Suspense, useState } from "react";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import toast from "react-hot-toast";
 import { GrGoogle } from "react-icons/gr";
+import { Eye, EyeOff } from "lucide-react";
 import Lottie from "lottie-react";
 import loadingAnimation from "@/assets/Insider-loading.json";
 
 function RegisterForm() {
+  const router = useRouter();
   const searchParams = useSearchParams();
-  const redirect = searchParams.get("redirect") || "/";
 
+  const redirect = searchParams.get("redirect") || "/";
   const [loading, setLoading] = useState(false);
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
   const handleRegister = async (e) => {
     e.preventDefault();
 
+    if (loading) return;
+
     const form = e.currentTarget;
+
     const name = form.name.value.trim();
     const email = form.email.value.trim();
     const password = form.password.value;
@@ -37,14 +43,17 @@ function RegisterForm() {
     try {
       setLoading(true);
 
-      const { data, error } = await authClient.signUp.email({
+      const payload = {
         name,
         email,
         password,
-        image,
-      });
+      };
 
-      console.log("Register data:", data);
+      if (image) {
+        payload.image = image;
+      }
+
+      const { data, error } = await authClient.signUp.email(payload);
 
       if (error) {
         console.log("Register error:", error);
@@ -52,17 +61,29 @@ function RegisterForm() {
         return;
       }
 
+      console.log("Register data:", data);
+
       toast.success("Registration successful");
-      window.location.href = `/login?redirect=${encodeURIComponent(redirect)}`;
+      form.reset();
+      setIsPasswordVisible(false);
+
+      router.push(`/login?redirect=${encodeURIComponent(redirect)}`);
+      router.refresh();
     } catch (error) {
-      console.log("Catch error:", error);
-      toast.error(error?.message || "Something went wrong");
+      console.log("Register catch error:", error);
+
+      toast.error(
+        error?.message ||
+          "Registration failed. Please check your auth API setup.",
+      );
     } finally {
       setLoading(false);
     }
   };
 
   const handleGoogleLogin = async () => {
+    if (loading) return;
+
     try {
       setLoading(true);
 
@@ -94,6 +115,7 @@ function RegisterForm() {
       >
         <div className="text-center">
           <h1 className="text-4xl font-black tracking-tight">Register</h1>
+
           <p className="mt-3 text-sm text-white/60">
             Create your account and start shopping.
           </p>
@@ -101,62 +123,96 @@ function RegisterForm() {
 
         <div className="mt-8 space-y-4">
           <div>
-            <label className="mb-2 block text-sm font-bold text-white/80">
+            <label
+              htmlFor="name"
+              className="mb-2 block text-sm font-bold text-white/80"
+            >
               Full Name
             </label>
 
             <input
+              id="name"
               name="name"
               type="text"
               placeholder="Enter your full name"
               className="w-full rounded-2xl border border-white/10 bg-white/10 px-4 py-4 text-white outline-none transition placeholder:text-white/35 focus:border-orange-400 focus:bg-white/15"
               required
               autoComplete="name"
+              disabled={loading}
             />
           </div>
 
           <div>
-            <label className="mb-2 block text-sm font-bold text-white/80">
+            <label
+              htmlFor="email"
+              className="mb-2 block text-sm font-bold text-white/80"
+            >
               Email
             </label>
 
             <input
+              id="email"
               name="email"
               type="email"
               placeholder="Enter your email"
               className="w-full rounded-2xl border border-white/10 bg-white/10 px-4 py-4 text-white outline-none transition placeholder:text-white/35 focus:border-orange-400 focus:bg-white/15"
               required
               autoComplete="email"
+              disabled={loading}
             />
           </div>
 
           <div>
-            <label className="mb-2 block text-sm font-bold text-white/80">
-              Image Path Optional
+            <label
+              htmlFor="image"
+              className="mb-2 block text-sm font-bold text-white/80"
+            >
+              Image URL Optional
             </label>
 
             <input
+              id="image"
               name="image"
               type="url"
               placeholder="https://example.com/profile.png"
               className="w-full rounded-2xl border border-white/10 bg-white/10 px-4 py-4 text-white outline-none transition placeholder:text-white/35 focus:border-orange-400 focus:bg-white/15"
+              disabled={loading}
             />
           </div>
 
           <div>
-            <label className="mb-2 block text-sm font-bold text-white/80">
+            <label
+              htmlFor="password"
+              className="mb-2 block text-sm font-bold text-white/80"
+            >
               Password
             </label>
 
-            <input
-              name="password"
-              type="password"
-              placeholder="Create a password"
-              className="w-full rounded-2xl border border-white/10 bg-white/10 px-4 py-4 text-white outline-none transition placeholder:text-white/35 focus:border-orange-400 focus:bg-white/15"
-              required
-              minLength={8}
-              autoComplete="new-password"
-            />
+            <div className="relative">
+              <input
+                id="password"
+                name="password"
+                type={isPasswordVisible ? "text" : "password"}
+                placeholder="Create a password"
+                className="w-full rounded-2xl border border-white/10 bg-white/10 px-4 py-4 pr-13 text-white outline-none transition placeholder:text-white/35 focus:border-orange-400 focus:bg-white/15"
+                required
+                minLength={8}
+                autoComplete="new-password"
+                disabled={loading}
+              />
+
+              <button
+                type="button"
+                onClick={() => setIsPasswordVisible((prev) => !prev)}
+                disabled={loading}
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-white/50 transition hover:text-yellow-400 disabled:cursor-not-allowed disabled:opacity-50"
+                aria-label={
+                  isPasswordVisible ? "Hide password" : "Show password"
+                }
+              >
+                {isPasswordVisible ? <EyeOff size={20} /> : <Eye size={20} />}
+              </button>
+            </div>
           </div>
         </div>
 
@@ -216,7 +272,7 @@ export default function RegisterPage() {
           <div className="rounded-3xl border border-white/10 bg-white/10 p-8 shadow-[0_0_60px_rgba(255,255,255,0.08)] backdrop-blur-xl">
             <div className="relative h-14 w-14">
               <div className="absolute inset-0 rounded-full border-4 border-white/10" />
-              <div className="absolute inset-0 animate-spin rounded-full border-4 border-transparent border-t-white border-r-white/70" />
+              <div className="absolute inset-0 animate-spin rounded-full border-4 border-transparent border-r-white/70 border-t-white" />
             </div>
           </div>
         </main>
