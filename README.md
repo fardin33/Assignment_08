@@ -1,9 +1,15 @@
 Project Name : **SunCart – Summer Essentials Store**
 
+---
+
 About SunCart Project : **Your Smart Summer Shopping Partner**
+
 SunCart is a modern summer-focused eCommerce platform where users can explore and purchase seasonal products like sunglasses, skincare items, summer outfits, beach accessories, caps, sandals, and more. The project is designed with a fresh summer vibe, responsive layout, and smooth user experience. Users can browse products from JSON data, view popular products, check product details after login, and manage their profile through authentication using BetterAuth.
 
+---
+
 Technologies Used :
+
 Next.js
 Tailwind CSS
 DaisyUI / HeroUI
@@ -15,6 +21,8 @@ Lottie
 Environment Variables
 Vercel / Render
 
+---
+
 3 Features About SunCart Project :
 
 **Protected Product Details Page:**
@@ -25,3 +33,5 @@ SunCart includes login, register, and Google social login using BetterAuth. User
 
 **User Profile & Update Information:**
 Logged-in users can visit the My Profile page to see their name, email, and profile photo. They can also update their name and image from a separate update profile route.
+
+---
