@@ -480,10 +480,22 @@ export default function Navbar() {
     { name: "My Profile", href: "/profile" },
   ];
 
+  // const getActiveLink = () => {
+  //   if (pathname === "/") return "Home";
+  //   if (pathname.startsWith("/products")) return "Products";
+  //   if (pathname.startsWith("/profile")) return "My Profile";
+  //   if (pathname.startsWith("/UpdateProfile")) return "My Profile";
+
+  //   return "";
+  // };
+
   const getActiveLink = () => {
     if (pathname === "/") return "Home";
-    if (pathname.startsWith("/products")) return "Products";
-    if (pathname.startsWith("/profile")) return "My Profile";
+
+    // শুধু /products page এ selected থাকবে
+    if (pathname === "/products") return "Products";
+
+    if (pathname === "/profile") return "My Profile";
     if (pathname.startsWith("/UpdateProfile")) return "My Profile";
 
     return "";
