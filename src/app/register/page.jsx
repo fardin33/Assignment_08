@@ -126,7 +126,7 @@ function RegisterForm() {
       <form
         onSubmit={handleRegister}
         noValidate
-        className="relative z-10 w-full max-w-md rounded-4xl border border-white/10 bg-white/10 p-8 shadow-[0_25px_80px_rgba(0,0,0,0.35)] backdrop-blur-xl"
+        className="relative z-10 w-full max-w-md rounded-4xl border border-white/10 p-8 shadow-[0_25px_80px_rgba(0,0,0,0.35)] backdrop-blur-xl"
       >
         <div className="text-center">
           <h1 className="text-4xl font-black tracking-tight">Register</h1>
