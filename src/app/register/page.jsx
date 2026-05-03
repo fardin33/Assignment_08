@@ -207,7 +207,7 @@ function RegisterForm() {
                 name="password"
                 type={isPasswordVisible ? "text" : "password"}
                 placeholder="Create a password"
-                className="w-full rounded-2xl border border-white/10 bg-white/10 px-4 py-4 pr-13 text-white outline-none transition placeholder:text-white/35 focus:border-orange-400 focus:bg-white/15"
+                className="w-full rounded-2xl border border-white/10 bg-white/10 px-4 py-4 pr-13 text-white outline-none transition placeholder:text-white/35 focus:border-orange-400"
                 minLength={8}
                 autoComplete="new-password"
                 disabled={loading}

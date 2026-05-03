@@ -141,7 +141,7 @@ export default function LoginForm() {
                 name="password"
                 type={isPasswordVisible ? "text" : "password"}
                 placeholder="Enter your password"
-                className="w-full rounded-2xl border border-white/10 bg-white/10 px-4 py-4 pr-13 text-white outline-none transition placeholder:text-white/35 focus:border-orange-400 focus:bg-white/15"
+                className="w-full rounded-2xl border border-white/10 bg-white/10 px-4 py-4 pr-13 text-white outline-none transition placeholder:text-white/35 focus:border-orange-400 "
                 autoComplete="current-password"
                 disabled={loading}
               />
